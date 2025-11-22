@@ -105,7 +105,9 @@ local config = {
                 }
                 return classMap[vehicleData.vehicle_class] or "SEDAN"
             end,
-            ["img"] = "vehicle_picture_url",
+            ["img"] = function(vehicleData)
+                return "https://docs.fivem.net/vehicles/" .. vehicleData.model
+            end,
         -- Add more keys as needed:
         -- owner = "Owner"  -- Example: if pedData.Owner exists.
         },
