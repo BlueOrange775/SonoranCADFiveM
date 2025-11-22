@@ -79,12 +79,8 @@ local config = {
             end,
             -- Vehicle Information
             ["plate"] = "license_plate",
-            ["make"] = function(vehicleData)
-                return GetMakeNameFromVehicleModel(GetHashKey(vehicleData.model))
-            end,
-            ["model"] = function(vehicleData)
-                return GetDisplayNameFromVehicleModel(GetHashKey(vehicleData.model))
-            end,
+            ["make"] = "make",
+            ["model"] = "model",
             ["color"] = function(vehicleData)
                 if vehicleData.color == vehicleData.color_secondary then
                     return vehicleData.color
