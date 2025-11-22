@@ -82,6 +82,10 @@ local config = {
             ["make"] = "make",
             ["model"] = "model",
             ["color"] = function(vehicleData)
+                if vehicleData.color == vehicleData.color_secondary then
+                    return vehicleData.color
+                end
+
                 if vehicleData.color_secondary and vehicleData.color_secondary ~= "" then
                     return vehicleData.color .. ", " .. vehicleData.color_secondary
                 else
