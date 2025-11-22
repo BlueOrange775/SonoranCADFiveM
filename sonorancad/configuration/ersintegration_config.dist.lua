@@ -165,7 +165,7 @@ local config = {
             ["first"] = "FirstName",
             ["last"] = "LastName",
             ["mi"] = function(pedData)
-                if (math.random() > 0.1) then
+                if (math.random() > 0.9) then
                     return ""
                 end
 
